@@ -1,0 +1,22 @@
+# ninja log v5
+1	758	6700374858983833	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+759	1035	6700374861258430	HuffmanTree.exe	af355833849f5a5
+1	876	6700374713201050	CMakeFiles/HuffmanTree.dir/implementation.cpp.obj	cbbb98f8ed09da27
+0	731	6700376015053955	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+731	1087	6700376018122274	HuffmanTree.exe	af355833849f5a5
+0	879	6700377437031443	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+879	1161	6700377439401978	HuffmanTree.exe	af355833849f5a5
+1	865	6700378270542829	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+865	1229	6700378273695580	HuffmanTree.exe	af355833849f5a5
+1	878	6700378988492767	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+879	1155	6700378990843293	HuffmanTree.exe	af355833849f5a5
+0	872	6700379619243398	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+873	1235	6700379622370373	HuffmanTree.exe	af355833849f5a5
+1	883	6700380502544443	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+884	1166	6700380504914992	HuffmanTree.exe	af355833849f5a5
+0	975	6700381415938054	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+976	1361	6700381419308831	HuffmanTree.exe	af355833849f5a5
+1	895	6700382421923924	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+895	1162	6700382424174501	HuffmanTree.exe	af355833849f5a5
+0	890	6700382972023847	CMakeFiles/HuffmanTree.dir/main.cpp.obj	8b2a2fd4639a7c74
+890	1247	6700382975124547	HuffmanTree.exe	af355833849f5a5
