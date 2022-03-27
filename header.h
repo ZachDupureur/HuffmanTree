@@ -8,25 +8,37 @@
 #include <iomanip>
 #include <fstream>
 
-class Node {
+class charNode {
 public:
-    std::string data{};
     char letter{};
-    Node* right;
-    Node* left;
 
-    Node(std::string data, char i) {
-        this->data = data;
+    charNode(char i) {
         letter = i;
+    }
+};
+
+class numNode {
+public:
+    int num;
+    numNode* right;
+    numNode* left;
+    charNode* letter{};
+    numNode() {
         right = nullptr;
         left = nullptr;
+        num = 0;
+    }
+    explicit numNode(int i) {
+        right = nullptr;
+        left = nullptr;
+        num = i;
     }
 };
 
 
 class huffTree {
 public:
-    Node* root;
+    numNode* root = new numNode();
 
     void insertLetter(char i, std::string data);
     bool searchTree(std::string currentString, char& currentLetter);

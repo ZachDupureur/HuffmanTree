@@ -1,43 +1,30 @@
 // Created by Zach Dupureur on 3/26/2022.
-
-#include <utility>
-
 #include "header.h"
 
-void huffTree::insertLetter(char i, std::string data) {
-    Node* newNode = new Node(std::move(data), i);
-    Node* temp = root;
-    if (temp == nullptr) { // Tree is empty, make new node root
-        root = newNode;
+void huffTree::insertLetter(char i, std::string route) {
+    numNode* temp = root;
+    numNode* parent = root;
+    auto* newNode = new charNode(i);
+    if (temp == nullptr) { // Tree is empty, create empty root
+        root = new numNode;
     }
     else { // Tree not empty
-        while (temp != nullptr) { // Search for leaf
-            if (temp->data == newNode->data) { // Node found, but duplicate
-                temp = nullptr;
-            }
-            else {
-                if (newNode->data < temp->data) { // If smaller go to left
-                    if (temp->left == nullptr) { // Add node if nullptr
-                        temp->left = newNode;
-                        temp = nullptr;
-                    }
-                    else {
-                        temp = temp->left;
-                    }
+        for (char j : route) {
+            if (j == 1) {
+                temp = temp->right;
+                if (temp == nullptr) {
+                    parent->right = new numNode(1);
                 }
-                else {
-                    if (newNode->data > temp->data) { // If larger go to right
-                        if (temp->right == nullptr) { // Add node if nullptr
-                            temp->right = newNode;
-                            temp = nullptr;
-                        }
-                        else {
-                            temp = temp->right;
-                        }
-                    }
+            }
+            else if (j == 0) {
+                temp = temp->left;
+                if (temp == nullptr) {
+                    parent->left = new numNode(0);
                 }
             }
         }
+
+
     }
 
     temp = nullptr;
