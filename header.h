@@ -12,7 +12,7 @@ class charNode {
 public:
     char letter{};
 
-    charNode(char i) {
+    explicit charNode(char i) {
         letter = i;
     }
 };
@@ -22,15 +22,17 @@ public:
     int num;
     numNode* right;
     numNode* left;
-    charNode* letter{};
+    charNode* letter;
     numNode() {
         right = nullptr;
         left = nullptr;
-        num = 0;
+        letter = nullptr;
+        num = 9;
     }
     explicit numNode(int i) {
         right = nullptr;
         left = nullptr;
+        letter = nullptr;
         num = i;
     }
 };
@@ -38,10 +40,10 @@ public:
 
 class huffTree {
 public:
-    numNode* root = new numNode();
+    numNode* root = nullptr;
 
-    void insertLetter(char i, std::string data);
-    bool searchTree(std::string currentString, char& currentLetter);
+    void insertLetter(char i, std::string route);
+    void decrypt(std::ifstream & input);
 };
 
 #endif //HUFFMANTREE_HEADER_H

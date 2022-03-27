@@ -33,26 +33,13 @@ int main() {
             return -1;
         }
 
-        while (!huffmanCode.eof()) {
+        while (!huffmanCode.eof() && huffmanCode.good()) {
             huffmanCode >> currentLetter >> currentNum;
             huffTree.insertLetter(currentLetter, currentNum);
         }
 
+        huffTree.decrypt(huffmanMessage);
 
-        std::string currentString;
-        char a;
-        while (!huffmanMessage.eof() && huffmanMessage.good()) { // Translating message using a loop
-            bool found = false;
-            while (!found && !huffmanMessage.eof()) {
-                huffmanMessage >> a;
-                currentString.append(1, a);
-                found = huffTree.searchTree(currentString, a);
-            }
-            if (!huffmanMessage.eof()) {
-                std::cout << a << " : " << currentString << std::endl;
-                currentString = "";
-            }
-        }
     }
     catch (std::exception &e) {
         std::cout << "Exception caught: " << e.what() << std::endl;
