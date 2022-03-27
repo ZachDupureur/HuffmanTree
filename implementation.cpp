@@ -56,3 +56,8 @@ void huffTree::decrypt(std::ifstream & input) { // Takes input stream and output
         }
     }
 }
+
+void clearCin() { // Clear cin
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}

@@ -46,4 +46,6 @@ public:
     void decrypt(std::ifstream & input);
 };
 
+void clearCin();
+
 #endif //HUFFMANTREE_HEADER_H
